@@ -8,7 +8,9 @@ jobs:
   test-bot:
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest]
+        include:
+          - os: macos-10.15
+            env: { MACOSX_DEPLOYMENT_TARGET: 10.13 }
     runs-on: ${{ matrix.os }}
     steps:
       - name: Set up Homebrew
