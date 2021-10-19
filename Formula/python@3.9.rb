@@ -11,6 +11,11 @@ class PythonAT39 < Formula
     regex(%r{href=.*?v?(3\.9(?:\.\d+)*)/?["' >]}i)
   end
 
+  bottle do
+    root_url "https://github.com/twlz0ne/homebrew-test-tap-new/releases/download/python@3.9-3.9.7"
+    sha256 catalina: "e3d9033b8230bf2020fdac2969bc36b266a04682e2baf3eff08b5e768fce222e"
+  end
+
   # setuptools remembers the build flags python is built with and uses them to
   # build packages later. Xcode-only systems need different flags.
   pour_bottle? only_if: :clt_installed
