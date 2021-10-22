@@ -11,6 +11,11 @@ class Readline < Formula
     regex(/href=.*?readline[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    root_url "https://github.com/twlz0ne/homebrew-test-tap-new/releases/download/readline-8.1"
+    sha256 cellar: :any, catalina: "5b25587e49d735aa7f9f44e2f6328939365d5bb7af2737a91a3e7b82dd52be25"
+  end
+
   keg_only :shadowed_by_macos, "macOS provides BSD libedit"
 
   uses_from_macos "ncurses"
