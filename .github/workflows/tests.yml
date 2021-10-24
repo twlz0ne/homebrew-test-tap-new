@@ -11,7 +11,6 @@ jobs:
         include:
           - os: macos-10.15
             env: { MACOSX_DEPLOYMENT_TARGET: 10.13 }
-    env: ${{ matrix.env }}
     runs-on: ${{ matrix.os }}
     steps:
       - name: Set up Homebrew
