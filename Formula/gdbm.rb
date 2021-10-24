@@ -6,6 +6,11 @@ class Gdbm < Formula
   sha256 "3aeac05648b3482a10a2da986b9f3a380a29ad650be80b9817a435fb8114a292"
   license "GPL-3.0-or-later"
 
+  bottle do
+    root_url "https://github.com/twlz0ne/homebrew-test-tap-new/releases/download/gdbm-1.20"
+    sha256 cellar: :any, catalina: "9b3abc9c8eadaf4d0e258978dbeb75f9bb5cb27e7c2db2923c928984cd01dfc2"
+  end
+
   # --enable-libgdbm-compat for dbm.h / gdbm-ndbm.h compatibility:
   #   https://www.gnu.org.ua/software/gdbm/manual/html_chapter/gdbm_19.html
   # Use --without-readline because readline detection is broken in 1.13
